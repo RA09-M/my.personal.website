@@ -325,6 +325,19 @@
 
         /* Education & tools */
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .cert-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+        .certificate-card { background:var(--surface); border:1px solid var(--border); border-radius:20px; overflow:hidden; box-shadow:var(--shadow); transition:transform .2s ease, box-shadow .2s ease; }
+        .certificate-card:hover { transform:translateY(-5px); box-shadow:0 22px 55px rgba(19,43,82,.15); }
+        .certificate-thumb { display:block; width:100%; aspect-ratio:1.414/1; object-fit:cover; object-position:top; background:var(--surface-2); border-bottom:1px solid var(--border); }
+        .certificate-body { padding:22px; }
+        .certificate-level { color:var(--primary-2); font-size:.76rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:8px; }
+        .certificate-body h3 { font-size:1.05rem; margin-bottom:8px; }
+        .certificate-body p { color:var(--muted); font-size:.86rem; }
+        .certificate-actions { display:flex; gap:8px; margin-top:16px; flex-wrap:wrap; }
+        .certificate-actions .btn { padding:9px 13px; font-size:.82rem; }
+        @media (max-width:900px) { .cert-grid { grid-template-columns:1fr 1fr; } }
+        @media (max-width:520px) { .cert-grid { grid-template-columns:1fr; } }
+
         .education h3, .certs h3 { margin-bottom: 7px; }
         .muted { color: var(--muted); }
         .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
@@ -456,7 +469,7 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a class="btn btn-primary" href="RoseAnn_Mariscotes_CV.docx" download>↓ Download CV</a>
+                    <a class="btn btn-primary" href="RoseAnn_Mariscotes_CV.pdf" download>↓ Download CV</a>
                     <a class="btn btn-secondary" href="#contact">Let's Connect →</a>
                 </div>
 
@@ -640,15 +653,52 @@
                     </div>
 
                     <div class="card certs reveal">
-                        <h3>Training & Certifications</h3>
+                        <h3>Professional Tools</h3>
                         <div class="tag-list">
-                            <span class="tag">Xero Certified L1–L3</span>
                             <span class="tag">Microsoft Excel</span>
                             <span class="tag">SAP ERP</span>
                             <span class="tag">QuickBooks</span>
                             <span class="tag">Microsoft Office</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="section-head reveal" style="margin-top:55px;margin-bottom:28px">
+                    <div class="section-kicker">Verified credentials</div>
+                    <h3 class="section-title" style="font-size:2rem">Xero Certifications</h3>
+                    <p class="section-intro">Click any certificate to view the original PDF, or download a copy.</p>
+                </div>
+
+                <div class="cert-grid">
+                    <article class="certificate-card reveal">
+                        <a href="assets/certificates/Xero_Associate_Level_1.pdf" target="_blank"><img class="certificate-thumb" src="assets/certificates/thumbs/Xero_Associate_Level_1.png" alt="Xero Certified Associate certificate"></a>
+                        <div class="certificate-body">
+                            <div class="certificate-level">Xero · Level 1</div>
+                            <h3>Xero Certified Associate</h3>
+                            <p>Certified 18 July 2026 · Valid until 23 July 2027</p>
+                            <div class="certificate-actions"><a class="btn btn-primary" href="assets/certificates/Xero_Associate_Level_1.pdf" target="_blank">View Certificate</a><a class="btn btn-secondary" href="assets/certificates/Xero_Associate_Level_1.pdf" download>Download</a></div>
+                        </div>
+                    </article>
+
+                    <article class="certificate-card reveal">
+                        <a href="assets/certificates/Xero_Professional_Level_2.pdf" target="_blank"><img class="certificate-thumb" src="assets/certificates/thumbs/Xero_Professional_Level_2.png" alt="Xero Certified Professional certificate"></a>
+                        <div class="certificate-body">
+                            <div class="certificate-level">Xero · Level 2</div>
+                            <h3>Xero Certified Professional</h3>
+                            <p>Certified 18 July 2026 · Valid until 23 July 2027</p>
+                            <div class="certificate-actions"><a class="btn btn-primary" href="assets/certificates/Xero_Professional_Level_2.pdf" target="_blank">View Certificate</a><a class="btn btn-secondary" href="assets/certificates/Xero_Professional_Level_2.pdf" download>Download</a></div>
+                        </div>
+                    </article>
+
+                    <article class="certificate-card reveal">
+                        <a href="assets/certificates/Xero_Specialist_Level_3.pdf" target="_blank"><img class="certificate-thumb" src="assets/certificates/thumbs/Xero_Specialist_Level_3.png" alt="Xero Certified Specialist certificate"></a>
+                        <div class="certificate-body">
+                            <div class="certificate-level">Xero · Level 3</div>
+                            <h3>Xero Certified Specialist</h3>
+                            <p>Certified 23 July 2026 · Valid until 23 July 2027</p>
+                            <div class="certificate-actions"><a class="btn btn-primary" href="assets/certificates/Xero_Specialist_Level_3.pdf" target="_blank">View Certificate</a><a class="btn btn-secondary" href="assets/certificates/Xero_Specialist_Level_3.pdf" download>Download</a></div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -671,7 +721,7 @@
                         </div>
                     </div>
 
-                    <a class="btn btn-secondary" href="RoseAnn_Mariscotes_CV.docx" download>Download CV ↓</a>
+                    <a class="btn btn-secondary" href="RoseAnn_Mariscotes_CV.pdf" download>Download CV ↓</a>
                 </div>
             </div>
         </section>
