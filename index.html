@@ -350,6 +350,19 @@
             font-weight: 700;
         }
 
+
+        /* Portfolio */
+        .portfolio-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+        .portfolio-card { display:flex; gap:22px; background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:28px; box-shadow:var(--shadow); transition:transform .2s ease,border-color .2s ease; }
+        .portfolio-card:hover { transform:translateY(-5px); border-color:rgba(47,100,199,.4); }
+        .portfolio-icon { flex:0 0 52px; width:52px; height:52px; display:grid; place-items:center; border-radius:14px; background:var(--surface-2); color:var(--primary-2); font-size:1.35rem; font-weight:800; }
+        .portfolio-body h3 { font-size:1.25rem; margin-bottom:8px; }
+        .portfolio-body p { color:var(--muted); margin-bottom:6px; }
+        .portfolio-label { color:var(--primary-2); font-size:.76rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .portfolio-actions { display:flex; gap:10px; margin-top:20px; flex-wrap:wrap; }
+        @media (max-width:900px) { .portfolio-grid { grid-template-columns:1fr; } }
+        @media (max-width:520px) { .portfolio-card { flex-direction:column; padding:22px; } }
+
         /* Contact */
         .contact-box {
             background: linear-gradient(135deg, var(--primary), var(--primary-2));
@@ -444,6 +457,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -542,6 +556,30 @@
                     <article class="skill-card reveal"><div class="skill-icon">▤</div><h3>Analysis</h3><p>Forecasting, variance analysis and performance reporting.</p></article>
                     <article class="skill-card reveal"><div class="skill-icon">◈</div><h3>ERP & Software</h3><p>SAP, Xero, QuickBooks, Excel and financial systems.</p></article>
                     <article class="skill-card reveal"><div class="skill-icon">⚙</div><h3>Administration</h3><p>Documentation control, vendor coordination and workflow support.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-kicker">Portfolio</div>
+                    <h2 class="section-title">Practical accounting projects</h2>
+                    <p class="section-intro">Sample projects demonstrating accounting knowledge, Excel skills, reporting, reconciliation, and financial data analysis.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <article class="portfolio-card reveal">
+                        <div class="portfolio-icon">▤</div>
+                        <div class="portfolio-body">
+                            <div class="portfolio-label">Microsoft Excel · Accounts Receivable</div>
+                            <h3>Accounts Receivable Aging Report</h3>
+                            <p>A sample Excel project demonstrating invoice tracking, payment monitoring, outstanding balance calculations, aging analysis, and a management dashboard.</p>
+                            <div class="tag-list">
+                                <span class="tag">Accounts Receivable</span><span class="tag">Excel</span><span class="tag">Aging Analysis</span><span class="tag">Reporting</span>
+                            </div>
+                            <div class="portfolio-actions"><a class="btn btn-primary" href="portfolio-ar.html">View Project →</a></div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
