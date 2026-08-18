@@ -525,34 +525,13 @@
             margin: 0 auto;
         }
 
-        .video-placeholder {
+        .video-wrapper iframe {
+            display: block;
+            width: 100%;
             aspect-ratio: 16 / 9;
-            background: #111827;
+            border: 0;
             border-radius: 20px;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            padding: 30px;
-            color: white;
             box-shadow: var(--shadow);
-        }
-
-        .video-placeholder .play {
-            width: 68px;
-            height: 68px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: var(--primary-2);
-            font-size: 1.4rem;
-            margin: 0 auto 18px;
-        }
-
-        .video-placeholder p {
-            opacity: .75;
-            max-width: 500px;
-            margin: 8px auto 0;
-            font-size: .9rem;
         }
 
         .video-note {
@@ -1069,35 +1048,19 @@
 
             <div class="video-wrapper">
 
-                <!--
-                    WHEN YOUR VIDEO IS READY:
-                    Replace the entire video-placeholder below with:
-
                     <iframe
                         width="100%"
                         height="100%"
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                        src="https://www.youtube.com/embed/Rsk-a3zL3Yc"
                         title="Accounts Receivable Aging Report Demonstration"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write;
                         encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
-                -->
-
-                <div class="video-placeholder">
-                    <div>
-                        <div class="play">▶</div>
-                        <h3>Accounts Receivable Aging Report Demonstration</h3>
-                        <p>
-                            Your 1–2 minute Excel demonstration video will appear
-                            here after you upload it to YouTube or another video host.
-                        </p>
-                    </div>
-                </div>
 
                 <p class="video-note">
-                    Video demonstration coming soon.
+                    Watch the demonstration of the Accounts Receivable Aging Report
                 </p>
 
             </div>
